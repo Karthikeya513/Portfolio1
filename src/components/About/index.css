@@ -1,0 +1,102 @@
+.about {
+  background: linear-gradient(135deg,#262c38,#101521);
+  color: #1a202c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adds space between elements */
+  max-width: 800px;
+  margin: 0 auto;
+  transition: padding 2.0s ease-in-out; /* Smoothly adjusts spacing */
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  border: 1px solid #222b3a;
+  margin-bottom: 20px;
+  transition: transform 0.15s ease-in-out, margin-bottom 0.15s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.5);
+  opacity: 0.1;
+  margin-bottom: 100px; /* Creates more space below the image when enlarged */
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #deb850;
+  font-family: Roboto;
+  transition: font-size 0.15s ease-in-out; /* Optionally animate font size */
+}
+.about-title:hover {
+  color: #cc734a; /* Change color */
+  font-size: 380%;
+  font-family: "Roboto";
+}
+
+.about-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #adb9ce;
+  transition: font-size 0.15s ease-in-out;
+}
+/* Hover Effect */
+.about-text:hover {
+  color: #85aba0; /* Change color */
+  font-size: 150%;
+  font-family: "Roboto";
+}
+.about-content > * {
+  margin: 10px 0;
+}
+
+.background-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.scrolling-name {
+  position: absolute;
+  font-size: 7rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: scroll-name 10s linear infinite;
+}
+
+@keyframes scroll-name {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scrolling-name {
+    font-size: 6rem;
+  }
+}

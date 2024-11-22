@@ -1,0 +1,157 @@
+/* Experience Section */
+.experience {
+  background: linear-gradient(135deg,#101521,#262c38);
+  color: #f9fafb;
+  padding: 50px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3c557e;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: background-color 0.3s ease;
+}
+
+.timeline-item.right {
+  flex-direction: row-reverse; /* Move the content to the right side */
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-item.right .timeline-dot {
+  left: auto;
+  right: -10px; /* Move dot to the right side for right-aligned items */
+}
+
+.timeline-content {
+  padding: 15px;
+  background: rgba(130, 168, 229, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-left: 35px; /* For left-aligned */
+  margin-right: 35px; /* For right-aligned */
+  width: 90%;
+  transition: transform 0.5s ease, background-color 0.3s ease;
+}
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: #031a3e;
+}
+
+.timeline-content h4 {
+  font-size: 1.2rem;
+  color: #a1a1aa;
+}
+
+.duration {
+  font-style: italic;
+  color: #cbd5e1;
+  margin-top: 10px;
+}
+
+.timeline-content p {
+  margin-top: 10px;
+  color: #f9fafb;
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect - Scale Up and Shadow */
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Color Fill Animation */
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(102, 115, 130, 0.6), rgb(136, 177, 220));
+  z-index: 1;
+  transition: bottom 0.3s ease;
+}
+
+/* On Hover, Fill from Bottom */
+.card:hover::before {
+  bottom: 0;
+}
+
+/* Card Content */
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-item.right .timeline-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

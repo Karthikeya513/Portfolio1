@@ -1,0 +1,52 @@
+/* Hide the default cursor */
+body {
+    cursor: none;
+  }
+  
+  /* Small Cursor */
+  .custom-cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(229, 10, 10, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+  }
+  
+  /* Enlarged cursor on hover */
+  .custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Big Transparent Circle */
+  .big-circle {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(244, 238, 238, 0.1);
+    border: 0px solid #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* Hover effect for the big circle */
+  .big-circle.hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Smooth movement for the big circle only */
+  .big-circle {
+    transition: all 0.1s ease-out;
+  }
+  

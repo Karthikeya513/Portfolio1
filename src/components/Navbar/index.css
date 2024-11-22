@@ -1,0 +1,86 @@
+/* Base styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1a202c;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  transition: font-size 0.15s ease-in-out;
+}
+.logo h1:hover {
+  color: #cc6b22;
+  font-size: 200%;
+  font-family: "Roboto";
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffd700;
+  font-size: 180%;
+  font-family: "Roboto";
+}
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #1a202c;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px solid #ffd700;
+}
+
+.mobile-menu li {
+  margin: 10px 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-links.mobile-menu {
+    display: flex;
+  }
+}

@@ -1,0 +1,96 @@
+.projects {
+  background: linear-gradient(135deg, #171d2c, #262c38);
+  color: #f9fafb;
+  padding: 50px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1b76a4;
+  margin-bottom: 13%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.flicker {
+  animation: flicker-animation 3s infinite;
+}
+
+@keyframes flicker-animation {
+  0% { opacity: 1; }
+  25% { opacity: 0.4; }
+  50% { opacity: 1; }
+  75% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 30px;
+  justify-items: center;
+  justify-content: center; /* Aligns the grid items in the center */
+  max-width: 100%; /* Prevents overflow */
+}
+
+.project-card {
+  position: relative;
+  width: 300px; /* Larger cards */
+  height: 300px; /* Larger cards */
+  perspective: 1000px; /* Enable 3D effect */
+}
+
+.project-card .diamond {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #26477d, #1e293b);
+  color: white;
+  border-radius: 15px;
+  transform: rotate(45deg); /* Make it look like a diamond */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+}
+
+.project-card:hover .diamond {
+  transform: rotate(45deg) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2); /* Transparent fill on hover */
+}
+
+.diamond h3 {
+  transform: rotate(-45deg); /* Counter the diamond rotation */
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.diamond p {
+  transform: rotate(-45deg);
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* One item per row */
+  }
+}
